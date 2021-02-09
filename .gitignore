@@ -1,5 +1,6 @@
 #python
 dbconfig.py
+__pycache__
 
 #server
 /server/dbconfig.js

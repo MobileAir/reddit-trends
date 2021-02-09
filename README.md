@@ -8,6 +8,26 @@ IMPORTANT: I took most of the code from this [repo](https://github.com/asad70/re
 ## Requirements
 pip3 install -r requirements.txt
 
+There are sometimes issues reported on Raspberry Pi setups when installing using pip3 install (or pip install). These will typically mention:
+
+```
+libf77blas.so.3: cannot open shared object file: No such file or directory
+```
+The solution will be to either:
+
+```
+sudo apt-get install libatlas-base-dev
+```
+to install the missing libraries expected by the self-compiled NumPy (ATLAS is a possible provider of linear algebra).
+
+Alternatively use the NumPy provided by Raspbian. In which case run:
+
+```
+pip3 uninstall numpy  # remove previously installed version
+apt install python3-numpy
+```
+https://numpy.org/devdocs/user/troubleshooting-importerror.html#check-environment-variables
+
 ## Program Parameters
 <pre>
 subs = []           sub-reddit to search

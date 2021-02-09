@@ -17,7 +17,7 @@ from data import *
 from dbconfig import *
 import time
 import json
-#import pandas as pd
+import pandas as pd
 #import matplotlib.pyplot as plt
 #import squarify
 from nltk.sentiment.vader import SentimentIntensityAnalyzer

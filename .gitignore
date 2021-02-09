@@ -1,1 +1,6 @@
+#python
 dbconfig.py
+
+#server
+/server/dbconfig.js
+/server/node_modules

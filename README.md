@@ -1,6 +1,8 @@
 # reddit-sentiment-analysis
 This program goes thru reddit, finds the most mentioned tickers and uses Vader SentimentIntensityAnalyzer to calculate the ticker compound value, and then post it to a database. 
 
+There is a basic api build on express, and a single page client bootstrapped with create-react-app.
+
 IMPORTANT: I took most of the code from this [repo](https://github.com/asad70/reddit-sentiment-analysis).
 
 ## Requirements

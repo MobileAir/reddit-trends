@@ -20,7 +20,7 @@ const colorNames = [
     "rgb(70, 130, 180)",
 ]
 
-const GroupedBar = () => {
+const GroupedBar = ({loading}) => {
     const [data, setData] = useState({});
     useEffect(() => {
         fetch('/trends/1')
@@ -38,6 +38,7 @@ const GroupedBar = () => {
                     }
                 })
                 setData({ labels: tickers, datasets });
+                loading(false);
             });
     }, [])
     return <Bar data={data} options={options} />;

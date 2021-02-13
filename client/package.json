@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://trends.adamdill.com",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@reactchartjs/react-chart.js": "^1.0.0-rc.3",
     "@testing-library/jest-dom": "^5.11.9",

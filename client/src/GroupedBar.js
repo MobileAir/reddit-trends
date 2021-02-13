@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Bar } from '@reactchartjs/react-chart.js';
+import {Context} from './context';
 
 const options = {
     scales: {
@@ -21,11 +22,17 @@ const colorNames = [
 ]
 
 const GroupedBar = ({loading}) => {
+    const {id} = useContext(Context);
     const [data, setData] = useState({});
     useEffect(() => {
-        fetch('/trends/1')
+        fetch(`/trends/id/${id}`)
             .then(response => response.json())
             .then(result => {
+                console.log(result);
+                if (!result || !result.length) {
+                    loading(false);
+                    return;
+                }
                 const resultData = JSON.parse(result[0].data);
                 const tickers = Object.keys(resultData.scores);
                 // assume all data is structured consistently.
@@ -40,7 +47,7 @@ const GroupedBar = ({loading}) => {
                 setData({ labels: tickers, datasets });
                 loading(false);
             });
-    }, [])
+    }, [id])
     return <Bar data={data} options={options} />;
 }
 

@@ -3,6 +3,8 @@ import { Bar } from '@reactchartjs/react-chart.js';
 import {Context} from './context';
 
 const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
         yAxes: [
             {
@@ -48,7 +50,7 @@ const GroupedBar = ({loading}) => {
                 loading(false);
             });
     }, [id])
-    return <Bar data={data} options={options} />;
+    return <Bar data={data} width={null} height={null} options={options} />;
 }
 
 export default GroupedBar

@@ -10,8 +10,14 @@ function App() {
         <ContextProvider>
             <div className="app">
                 <LoadingScreen show={loading} />
-                <DatePicker />
-                <GroupedBar loading={setLoading} />
+                <div className="container">
+                    <div className="picker-container">
+                        <DatePicker />
+                    </div>
+                    <div className="chart-container">
+                        <GroupedBar loading={setLoading} />
+                    </div>
+                </div>
             </div>
         </ContextProvider>
     );

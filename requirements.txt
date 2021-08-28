@@ -22,5 +22,5 @@ six==1.15.0
 squarify==0.4.3
 tqdm==4.56.0
 update-checker==0.18.0
-urllib3==1.26.3
+urllib3==1.26.5
 websocket-client==0.57.0

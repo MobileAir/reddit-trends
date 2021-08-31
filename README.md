@@ -1,6 +1,6 @@
 # reddit-sentiment-analysis
 
-[demo](http://reddit-trends.adamdill.com/)
+[reddit-trends.adamdill.com](http://reddit-trends.adamdill.com/)
 
 This program goes thru reddit, finds the most mentioned tickers and uses Vader SentimentIntensityAnalyzer to calculate the ticker compound value, and then post it to a database. 
 
